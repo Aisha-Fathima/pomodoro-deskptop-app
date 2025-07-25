@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Pixelify Sans', sans-serif;
+  background: url('./assets/bg.png') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ❌ Close Button */
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 14px;
+  background-color: #ffe0f0;
+  border: 2px solid #ff8fa3;
+  color: #4c0033;
+  padding: 3px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 1px 1px 0 #ff8fa3;
+  z-index: 10;
+  transition: all 0.15s ease;
+}
+
+.close-btn:hover {
+  background-color: #ffd1dc;
+  transform: translateY(-1px);
+  box-shadow: 2px 2px 0 #ff8fa3;
+}
+
+/* 📦 Timer + Buttons Box */
+.container {
+  background: none;
+  padding: 10px;
+  border: none;
+  box-shadow: none;
+  width: 180px;
+  height: 200px;
+  text-align: center;
+}
+
+
+
+h1 {
+  font-size: 16px;
+  color: #b388eb;
+  margin-bottom: 6px;
+  text-shadow: 0 0 1px #e6ccff;
+}
+
+#timer {
+  font-size: 34px;
+  font-family: 'Courier New', monospace;
+  color: #5c4033; /* soft chocolate brown */
+  margin: 12px 0;
+}
+
+
+/* Animate pop effect */
+
+
+@keyframes soft-pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); } /* reduced scale */
+  100% { transform: scale(1); }
+}
+
+
+/* 🎮 Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+button {
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 12px;
+  background-color: #ffe0f0;
+  border: 2px solid #ff8fa3;
+  color: #4c0033;
+  padding: 4px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 0 #ff8fa3;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+button:hover {
+  background-color: #ffd1dc;
+  transform: translateY(-1px);
+  box-shadow: 2px 2px 0 #ff8fa3;
+}
+
+button:active {
+  transform: translateY(1px);
+  box-shadow: 0 0 0 #ff8fa3;
+}
+
+/* 💫 Pixel Burst Animation */
+.pixel-burst {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background: #ffb6c1;
+  border: 1px solid #fff;
+  opacity: 1;
+  transform: scale(1);
+  animation: burst 0.8s ease forwards;
+}
+
+@keyframes burst {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(4); opacity: 0; }
+}
